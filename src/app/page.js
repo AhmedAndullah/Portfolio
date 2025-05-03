@@ -6,29 +6,29 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <div
-      className="min-h-screen bg-white px-6 sm:px-12 py-12 flex flex-col items-center justify-center"
+      className="min-h-screen bg-white px-4 sm:px-6 py-12 flex flex-col items-center justify-center"
       style={{ fontFamily: "'Poppins', Arial, sans-serif" }}
     >
       {/* Hero Section */}
       <section
         id="home"
-        className="flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-6xl gap-8 mt-12 md:mt-24"
+        className="flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-6xl gap-10 md:gap-8 mt-12 md:mt-24"
       >
         {/* Text Section */}
-        <div className="text-left flex-1 md:pl-8 md:mt-16">
-          <h1 className="text-6xl font-bold text-gray-900 mb-4 whitespace-nowrap">
+        <div className="text-left flex-1 md:pl-8">
+          <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
             Software Engineer
           </h1>
-          <p className="text-xl text-gray-600 mb-6 max-w-md">
-            Hey, I'm Ahmed Abdullah. Computer Scientist, Full Stack Developer
-            and a Robot enthusiast from Pakistan.
+          <p className="text-lg sm:text-xl text-gray-600 mb-6 max-w-md">
+            Hey, I'm Ahmed Abdullah. Computer Scientist, Full Stack Developer,
+            and Robot enthusiast from Pakistan.
           </p>
-          <div className="flex gap-4 text-5xl">
+          <div className="flex gap-4 text-4xl sm:text-5xl">
             <a
               href="https://www.linkedin.com/in/ahmed-abdullah-451188264/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 transform transition-transform duration-300 hover:scale-110"
+              className="text-gray-700 hover:text-blue-600 transform transition-transform duration-300 hover:scale-110"
             >
               <FaLinkedin />
             </a>
@@ -46,19 +46,17 @@ export default function HomePage() {
         {/* Image Section */}
         <div className="flex-1 flex justify-center md:justify-end">
           <div
-            className="w-[350px] h-[450px] overflow-hidden shadow-lg blob-shape bg-cover bg-center"
+            className="w-[250px] sm:w-[300px] md:w-[350px] h-[350px] sm:h-[400px] md:h-[450px] overflow-hidden shadow-lg blob-shape bg-cover bg-center"
             style={{ backgroundImage: "url('/PP.jpg')" }}
           ></div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section className="mt-20 w-screen text-center bg-[#f9f9f9] py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-bold mb-12 text-4xl" style={{ fontSize: "40px" }}>
-            Skills
-          </h2>
-          <div className="flex flex-wrap justify-center gap-8">
+      <section className="mt-20 w-full text-center bg-[#f9f9f9] py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-bold mb-12 text-3xl sm:text-4xl">Skills</h2>
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
             {[
               "cplusplus",
               "java",
@@ -74,7 +72,7 @@ export default function HomePage() {
             ].map((icon) => (
               <div
                 key={icon}
-                className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center p-2 transition-transform duration-300 hover:scale-110"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-lg flex items-center justify-center p-2 transition-transform duration-300 hover:scale-110"
               >
                 <Image
                   src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`}
@@ -92,37 +90,31 @@ export default function HomePage() {
       {/* About Me Section */}
       <section
         id="about"
-        className="w-full bg-white flex justify-center items-center px-[50px] py-[50px]"
+        className="w-full bg-white flex flex-col md:flex-row justify-center items-center px-4 sm:px-6 py-16 gap-10"
       >
-        <div
-          className="flex flex-row items-center justify-center gap-[32px]"
-          style={{ fontFamily: "'Poppins', sans-serif", width: "1166px" }}
-        >
+        <div className="w-full md:w-1/2 flex justify-center">
           <div className="transition-transform duration-300 hover:scale-105 cursor-pointer">
             <Image
               src="/DesktopImage.jpg"
               alt="Desk Setup Illustration"
-              width={400}
-              height={300}
+              width={300}
+              height={200}
               className="object-contain"
             />
           </div>
-          <div
-            className="flex-1 about-info-container flex flex-col gap-[10px]"
-            style={{ maxWidth: "400px" }}
-          >
-            <h3 className="text-2xl font-bold text-[#3f51b5]">About Me</h3>
-            <p className="text-base text-[#333] leading-relaxed">
-              A Full-Stack Developer with profound skills in Java, HTML, CSS,
-              JavaScript, React , Python and Node Js. With more than 3 years of
-              experience in programming, I design and create stunning responsive
-              applications with outstanding performance and efficiency. I
-              prioritise user experience and utilise advance tools and
-              techniques for coding and development.
-            </p>
-          </div>
+        </div>
+        <div className="w-full md:w-1/2 max-w-lg text-left">
+          <h3 className="text-2xl font-bold text-[#3f51b5] mb-4">About Me</h3>
+          <p className="text-base text-[#333] leading-relaxed">
+            A Full-Stack Developer with skills in Java, HTML, CSS, JavaScript,
+            React, Python, and Node.js. With over 3 years of experience in
+            software development, I design and build responsive applications
+            focused on performance, user experience, and modern coding
+            practices.
+          </p>
         </div>
       </section>
+
 
       {/* Portfolio Section */}
       <section id="portfolio" className="w-screen bg-[#f9f9f9] py-20">
