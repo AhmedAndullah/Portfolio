@@ -41,6 +41,14 @@ export default function PortfolioPage() {
               github: "https://github.com/AhmedAndullah",
               live: "https://e-commerce-flutter-two.vercel.app",
             },
+            {
+                title: "Hybrid Auto",
+                desc: "Inventory management system for Hybrid Master. The system manages invoices and foresee trends through sales in products.",
+                image: "/HybridAuto.jpg",
+                stack: ["java","css3" ],
+                github: "https://github.com/AhmedAndullah",
+                live: "",
+              },
           ].map((project, i) => (
             <div
               key={i}
